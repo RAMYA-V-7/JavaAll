@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ArrayPrograms;
+
+import java.util.Scanner;
+
+public class DesOrde {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();//Size
+        int a1[]=new int[n];//Array declaration
+        int temp=0;
+       for(int i=0;i<n;i++)//Get from user
+       {
+           a1[i]=obj.nextInt();
+       }
+        //Sort in reverse
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if(a1[i]<a1[j])
+                {
+                    temp=a1[i];
+                    a1[i]=a1[j];
+                    a1[j]=temp;
+                }
+            }
+        }
+        System.out.print("Sorted array:");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(a1[i]);
+        }
+    }
+    
+}
